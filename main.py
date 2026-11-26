@@ -27,6 +27,7 @@ def main() -> None:
     assert 1 <= len(written) <= 180, "entry must be 1-180 characters"
     assert written.strip(), "entry must not be only whitespace"
     assert "\n" not in written, "entry must be a single line"
+    assert written == written.strip(), "entry must not have leading/trailing whitespace"
     assert len(written.split()) <= 25, "entry must be at most 25 words"
 
 
